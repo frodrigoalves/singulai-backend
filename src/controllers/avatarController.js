@@ -1,35 +1,47 @@
-const avatarService = require('../services/avatarService');
+// src/controllers/avatarController.js
 
-const getAvatars = async (req, res) => {
-  try {
-    const data = await avatarService.getAllAvatars();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ message: 'Erro ao buscar avatares', error });
+exports.criarAvatar = (req, res) => {
+  const { nome, estilo, progresso } = req.body;
+
+  if (!nome || !estilo || progresso === undefined) {
+    return res.status(400).json({ mensagem: 'Todos os campos são obrigatórios.' });
   }
+
+  const novoAvatar = {
+    id: Date.now(),
+    nome,
+    estilo,
+    progresso
+  };
+
+  // Aqui você pode salvar em um banco ou array simulado
+  res.status(201).json({
+    mensagem: 'Avatar criado com sucesso!',
+    avatar: novoAvatar
+  });
 };
 
-const createAvatar = async (req, res) => {
-  try {
-    const result = await avatarService.createAvatar(req.body);
-    res.status(201).json(result);
-  } catch (error) {
-    res.status(500).json({ message: 'Erro ao criar avatar', error });
-  }
-};
-
-// MOCK: para testes sem banco
-const getAvatarsMock = (req, res) => {
+exports.listarAvatares = (req, res) => {
   const avatares = [
-    { id: 1, nome: "Pedro", estilo: "Reflexivo, lógico, analítico", progresso: 60 },
-    { id: 2, nome: "Laura", estilo: "Acolhedora, empática, serena", progresso: 40 },
-    { id: 3, nome: "Letícia", estilo: "Criativa, vibrante, carinhosa", progresso: 90 }
+    {
+      id: 1,
+      nome: 'Pedro',
+      estilo: 'Reflexivo, lógico, analítico',
+      progresso: 60
+    },
+    {
+      id: 2,
+      nome: 'Laura',
+      estilo: 'Acolhedora, empática, serena',
+      progresso: 40
+    },
+    {
+      id: 3,
+      nome: 'Letícia',
+      estilo: 'Criativa, vibrante, carinhosa',
+      progresso: 90
+    }
   ];
-  res.status(200).json(avatares);
-};
 
-module.exports = {
-  getAvatars,
-  createAvatar,
-  getAvatarsMock
+  res.status(200).json(avatares);
 };
