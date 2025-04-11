@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const avatarController = require('../controllers/avatarController');
+const { criarAvatar, listarAvatares } = require('../controllers/avatarController');
 
-router.get('/', avatarController.getAllAvatars);
-router.post('/', avatarController.createAvatar);
+router.post('/', criarAvatar);
+router.get('/', listarAvatares);
 
 module.exports = router;

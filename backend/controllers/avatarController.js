@@ -1,19 +1,22 @@
 const Avatar = require('../models/avatarModel');
-const blockchain = require('../services/blockchainService');
 
-exports.createAvatar = async (req, res) => {
+exports.criarAvatar = async (req, res) => {
   try {
-    const { nome, faixaEtaria, energiaEmocional, criador } = req.body;
+    const novo = new Avatar(req.body);
+    const avatarSalvo = await novo.save();
+    res.status(201).json(avatarSalvo);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ erro: "Erro ao criar avatar." });
+  }
+};
 
-    // Envia para blockchain
-    const txHash = await blockchain.createAvatarOnChain(nome, faixaEtaria, energiaEmocional);
-
-    // Salva no MongoDB
-    const novo = new Avatar({ nome, faixaEtaria, energiaEmocional, criador, txHash });
-    await novo.save();
-
-    res.status(201).json({ msg: "Avatar criado com sucesso!", txHash });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+exports.listarAvatares = async (req, res) => {
+  try {
+    const avatares = await Avatar.find();
+    res.json(avatares);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ erro: "Erro ao buscar avatares." });
   }
 };
