@@ -5,6 +5,7 @@ require('dotenv').config();
 // Importa rotas
 const avatarRoutes = require('./routes/avatarRoutes');
 const walletRoutes = require('./routes/walletRoutes');
+const conectarMongo = require('./config/dbmongo');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
