@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const conectarMongo = require('./config/dbMongo');
+const conectarMongo = require('./config/dbmongo');
 const walletRoutes = require('./routes/walletRoutes');
 const avatarRoutes = require('./routes/avatarRoutes');
 
