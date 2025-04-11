@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SingulAI • Painel de Controle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="icon" href="./assets/img/favicon-32x32.png" />
+  <meta name="theme-color" content="#080d49" />
+  <style>
+    .bg-primary { background-color: #080d49; }
+    .text-highlight { color: #6366f1; }
+    .bg-soft { background-color: #1f223f; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-primary p-4 shadow flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-bold">SingulAI</h1>
+    <nav class="flex gap-6 text-sm md:text-base text-gray-300">
+      <a href="#avatars" class="hover:text-white">Avatares</a>
+      <a href="#capsulas" class="hover:text-white">Cápsulas</a>
+      <a href="#token" class="hover:text-white">Token</a>
+      <a href="singulai-pen.html" class="hover:text-white">Pen 3D</a>
+      <a href="visao.html" class="hover:text-white font-semibold">Visão</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="p-6 max-w-7xl mx-auto">
+
+    <!-- WALLET -->
+    <p id="wallet-info" class="text-sm text-gray-300 mb-6 bg-white/10 px-4 py-2 rounded border border-white/10">
+      🪪 Carregando identidade...
+    </p>
+
+    <!-- AVATARES -->
+    <section id="avatars" class="mb-12">
+      <h2 class="text-3xl font-bold text-highlight mb-4">🧠 Meus Avatares</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Avatares -->
+        
+    <div class="bg-soft rounded-xl p-4 shadow border border-white/10 text-center">
+      <img src="./assets/img/avatars/pedro.png" alt="Avatar de Pedro" class="w-32 h-32 mx-auto rounded-full border-4 border-highlight" />
+      <h3 class="text-xl mt-4 font-bold">Pedro</h3>
+      <p class="text-sm text-gray-400">Reflexivo, lógico, analítico</p>
+      <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-green-500/60">Contrato Ativo</span>
+      <div class="mt-4 flex flex-col gap-2">
+        <a href="https://typebot.io/avatar-pedro" target="_blank" class="bg-highlight px-4 py-2 rounded text-white hover:bg-indigo-600">Treinar</a>
+        <a href="capsula.html" class="border border-highlight px-4 py-2 rounded text-highlight hover:bg-highlight hover:text-white">Ver Legado</a>
+      </div>
+    </div>
+    
+    <div class="bg-soft rounded-xl p-4 shadow border border-white/10 text-center">
+      <img src="./assets/img/avatars/laura.png" alt="Avatar de Laura" class="w-32 h-32 mx-auto rounded-full border-4 border-highlight" />
+      <h3 class="text-xl mt-4 font-bold">Laura</h3>
+      <p class="text-sm text-gray-400">Acolhedora, empática, serena</p>
+      <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-yellow-500/60">Contrato de Memória</span>
+      <div class="mt-4 flex flex-col gap-2">
+        <a href="https://typebot.io/avatar-laura" target="_blank" class="bg-highlight px-4 py-2 rounded text-white hover:bg-indigo-600">Treinar</a>
+        <a href="capsula.html" class="border border-highlight px-4 py-2 rounded text-highlight hover:bg-highlight hover:text-white">Ver Legado</a>
+      </div>
+    </div>
+    
+    <div class="bg-soft rounded-xl p-4 shadow border border-white/10 text-center">
+      <img src="./assets/img/avatars/leticia.png" alt="Avatar de Letícia" class="w-32 h-32 mx-auto rounded-full border-4 border-highlight" />
+      <h3 class="text-xl mt-4 font-bold">Letícia</h3>
+      <p class="text-sm text-gray-400">Criativa, vibrante, carinhosa</p>
+      <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-purple-500/60">Curadora Afetiva</span>
+      <div class="mt-4 flex flex-col gap-2">
+        <a href="https://typebot.io/avatar-leticia" target="_blank" class="bg-highlight px-4 py-2 rounded text-white hover:bg-indigo-600">Treinar</a>
+        <a href="capsula.html" class="border border-highlight px-4 py-2 rounded text-highlight hover:bg-highlight hover:text-white">Ver Legado</a>
+      </div>
+    </div>
+    
+      </div>
+    </section>
+
+    <!-- TOKEN -->
+    <section id="token" class="mb-10">
+      <h2 class="text-3xl font-bold mb-4 text-highlight">💠 Token SAT</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-lg border border-blue-700">
+          <h4 class="text-white text-lg">Saldo Atual</h4>
+          <p class="text-2xl font-bold mt-2">3,240 SAT</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg border border-green-600">
+          <h4 class="text-white text-lg">Em Staking</h4>
+          <p class="text-2xl font-bold mt-2">820 SAT</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg border border-red-500">
+          <h4 class="text-white text-lg">SAT Queimados</h4>
+          <p class="text-2xl font-bold mt-2">520 SAT</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMOÇÕES -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">Registrar Emoções</h2>
+      <a href="https://typebot.io/emotional-sync" class="text-blue-400 hover:underline italic text-sm">Acesse o módulo emocional</a>
+    </section>
+
+    <!-- CAPSULAS -->
+    <section id="capsulas" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Criar Cápsula do Tempo</h2>
+      <form class="bg-gray-800 p-6 rounded-lg border border-white/10 space-y-4">
+        <input type="text" placeholder="Para quem é essa cápsula?" class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700" />
+        <input type="date" class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700" />
+        <textarea rows="3" placeholder="Escreva sua mensagem..." class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700"></textarea>
+        <button class="bg-highlight px-6 py-2 rounded text-white hover:bg-indigo-600 transition">Salvar Cápsula</button>
+      </form>
+    </section>
+
+    <!-- PILARES VISUAL -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-highlight mb-4">🧩 Pilares da Eternização Digital</h2>
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 text-center">
+        <img src="./assets/img/pilares.png" alt="Pilares da Eternização Digital" class="mx-auto rounded-lg shadow-lg max-w-full">
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-gray-500 text-xs py-6">
+    &copy; 2025 SingulAI • O tempo como herança
+  </footer>
+
+  <script>
+    (async () => {
+      const el = document.getElementById('wallet-info');
+      if (window.ethereum) {
+        try {
+          const contas = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          localStorage.setItem('singulai_wallet', contas[0]);
+          el.textContent = `🪪 Wallet Conectada: ${contas[0]}`;
+        } catch (err) {
+          el.textContent = '⚠️ Permissão da carteira recusada.';
+        }
+      } else {
+        el.textContent = '🦊 Instale MetaMask para conectar sua wallet.';
+      }
+    })();
+  </script>
+</body>
+</html>

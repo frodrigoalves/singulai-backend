@@ -1,0 +1,14 @@
+# render.yaml — configuração para o Render.com
+
+services:
+  - type: web
+    name: singulai-backend
+    runtime: node
+    repo: https://github.com/frodrigoalves/singulai-backend
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
