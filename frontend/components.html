@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Componentes Reutilizáveis | SingulAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white p-10 font-sans space-y-16">
+
+  <!-- ✅ 1. Card Avatar -->
+  <div class="bg-soft p-6 rounded-lg shadow-lg w-full max-w-xs text-center border border-white/10">
+    <img src="assets/img/pedro.png" alt="Avatar" class="w-24 h-24 mx-auto rounded-full border-4 border-highlight">
+    <h3 class="text-xl font-bold mt-4">NOME</h3>
+    <p class="text-sm text-gray-400">Descrição do avatar</p>
+    <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full bg-green-600/60">Status</span>
+    <div class="flex flex-col gap-2 mt-4">
+      <a href="#" class="bg-highlight text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Treinar</a>
+      <a href="#" class="border border-highlight text-highlight px-4 py-2 rounded hover:bg-highlight hover:text-white transition">Ver Legado</a>
+    </div>
+  </div>
+
+  <!-- ✅ 2. Card Token -->
+  <div class="bg-gray-800 p-4 rounded-lg border border-blue-700 max-w-xs">
+    <h4 class="text-white text-lg">Saldo Atual</h4>
+    <p class="text-2xl font-bold mt-2">3,240 SAT</p>
+  </div>
+
+  <!-- ✅ 3. Seção com título -->
+  <section class="space-y-4">
+    <h2 class="text-3xl font-bold text-highlight">🔹 Título da Seção</h2>
+    <p class="text-sm text-gray-300">Descrição opcional ou instruções.</p>
+  </section>
+
+  <!-- ✅ 4. Botões padrão -->
+  <div class="flex gap-4">
+    <button class="bg-highlight px-4 py-2 rounded text-white hover:bg-indigo-600">Confirmar</button>
+    <button class="border border-highlight px-4 py-2 rounded text-highlight hover:bg-highlight hover:text-white">Cancelar</button>
+  </div>
+
+  <!-- ✅ 5. Formulário padrão -->
+  <form class="space-y-4 bg-white/5 p-6 rounded-lg border border-white/10 max-w-md">
+    <input type="text" placeholder="Digite aqui..." class="w-full px-4 py-2 rounded bg-gray-900 text-white border border-gray-700">
+    <textarea placeholder="Mensagem..." class="w-full px-4 py-2 rounded bg-gray-900 text-white border border-gray-700" rows="3"></textarea>
+    <button type="submit" class="bg-highlight text-white px-6 py-2 rounded hover:bg-indigo-600">Enviar</button>
+  </form>
+
+</body>
+</html>

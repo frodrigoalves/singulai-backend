@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SingulAI — Legado Digital Eterno</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="icon" href="assets/img/favicon-32x32.png" />
+  <meta name="theme-color" content="#080d49" />
+  <meta name="description" content="Visualize a SingulAI Pen em 3D. Uma revolução tecnológica que conecta sua memória ao futuro.">
+  <meta property="og:title" content="SingulAI Pen — Legado Digital Eterno">
+  <meta property="og:image" content="assets/img/pen-hero.png" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    model-viewer {
+      width: 100%;
+      height: 70vh;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(102, 224, 255, 0.3);
+    }
+    .gallery img {
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER + LOGO -->
+  <header class="text-center bg-black py-6">
+    <img src="assets/img/logo.png" alt="SingulAI Logo" class="mx-auto w-56 mb-4" />
+    <h1 class="text-3xl font-bold text-indigo-400">Legado Digital Eterno</h1>
+    <p class="text-sm text-gray-400 mt-2">Onde a alma encontra a tecnologia</p>
+  </header>
+
+  <!-- APRESENTAÇÃO -->
+  <section class="section text-center">
+    <h2 class="text-2xl font-bold text-blue-300 mb-4">🚀 O que é a SingulAI?</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-300 leading-relaxed">
+      A SingulAI é a primeira infraestrutura digital que une <strong>inteligência artificial afetiva</strong>,
+      <strong>blockchain</strong> e <strong>biometria física</strong> para criar legados que duram por gerações.
+      Com a SingulAI Pen, você assina contratos, ativa cápsulas temporais e deixa mensagens para filhos, netos
+      e o futuro. Tudo de forma segura, auditável e emocionalmente autêntica.
+    </p>
+  </section>
+
+  <!-- GALERIA DA PEN -->
+  <section class="section">
+    <h2 class="text-2xl font-bold text-purple-300 text-center mb-6">🔬 Estrutura da SingulAI Pen</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 gallery">
+      <img src="assets/img/pen-hero.png" alt="SingulAI Pen frontal" />
+      <img src="assets/img/pen-tech-internal.png" alt="SingulAI Pen corte técnico" />
+      <img src="assets/img/pen-closed.png" alt="SingulAI Pen vista fechada" />
+    </div>
+  </section>
+
+  <!-- VISUALIZAÇÃO 3D -->
+  <section class="section text-center">
+    <h2 class="text-2xl font-bold text-cyan-300 mb-4">🧊 Modelo Interativo 3D</h2>
+    <p class="mb-4 text-gray-400">Gire, aproxime e explore todos os detalhes da SingulAI Pen.</p>
+    <model-viewer 
+      src="assets/models/singulai-pen.glb"
+      alt="Visual 3D da SingulAI Pen"
+      auto-rotate
+      camera-controls
+      background-color="#111"
+      shadow-intensity="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look">
+    </model-viewer>
+
+    <a href="index.html" class="text-blue-400 mt-8 block hover:underline">← Voltar para o Dashboard</a>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section text-center" id="start">
+    <h2 class="text-2xl font-bold text-green-400 mb-4">🔗 Conecte seu Legado ao Futuro</h2>
+    <p class="max-w-xl mx-auto text-gray-300 mb-6">
+      Programe contratos inteligentes, envie mensagens póstumas, transfira heranças ou publique obras inéditas
+      com seu avatar. Tudo gravado na eternidade com o token SGL.
+    </p>
+    <a href="index.html" class="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-400 transition">Comece agora</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SingulAI · Desenvolvido para o futuro da consciência humana · Token SGL 🌐
+  </footer>
+
+</body>
+</html>

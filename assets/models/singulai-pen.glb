@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SingulAI Pen - Demonstração 3D</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="icon" href="assets/img/favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #66e0ff;
+    }
+    model-viewer {
+      width: 90vw;
+      height: 80vh;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(102, 224, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🖊️ SingulAI Pen — Visão 3D Interativa</h1>
+
+  <!-- Visualizador 3D -->
+  <model-viewer
+    src="assets/models/singulai-pen.glb"
+    alt="Protótipo 3D da SingulAI Pen"
+    auto-rotate
+    camera-controls
+    background-color="#111"
+    shadow-intensity="1"
+    ar
+    ar-modes="webxr scene-viewer quick-look">
+  </model-viewer>
+</body>
+</html>

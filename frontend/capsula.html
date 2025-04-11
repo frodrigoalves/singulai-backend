@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SingulAI • Cápsula do Tempo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="./assets/img/favicon-32x32.png" />
+  <style>
+    .bg-primary { background-color: #080d49; }
+    .text-highlight { color: #6366f1; }
+    .bg-soft { background-color: #1f223f; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+  <header class="bg-primary p-4 shadow flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-bold">Cápsula do Tempo</h1>
+    <nav>
+      <a href="dashboard.html" class="text-sm text-gray-300 hover:text-white">← Voltar ao Painel</a>
+    </nav>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-highlight mb-6">📦 Criar uma Cápsula</h2>
+    <form id="capsule-form" class="bg-soft p-6 rounded-lg border border-white/10 space-y-4">
+      <input type="text" placeholder="Para quem é essa cápsula?" class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700" required />
+      <input type="date" class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700" required />
+      <textarea rows="5" placeholder="Escreva sua mensagem para o futuro..." class="w-full bg-gray-900 text-white px-4 py-2 rounded border border-gray-700" required></textarea>
+      <button type="submit" class="bg-highlight px-6 py-2 rounded text-white hover:bg-indigo-600 transition">Salvar Cápsula</button>
+    </form>
+
+    <p class="text-sm text-gray-400 mt-4 italic">Essa cápsula será armazenada com segurança e revelada na data escolhida.</p>
+  </main>
+
+  <footer class="text-center text-gray-500 text-xs py-6">
+    &copy; 2025 SingulAI • Conectando Memórias ao Tempo
+  </footer>
+</body>
+</html>

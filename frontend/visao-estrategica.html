@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visão Estratégica | SingulAI</title>
+  <link rel="icon" href="./assets/img/favicon.ico" />
+  <meta name="description" content="Conheça a visão estratégica da SingulAI — uma plataforma de legado digital com IA, blockchain e empatia.">
+  <meta property="og:title" content="SingulAI - Visão Estratégica">
+  <meta property="og:image" content="./assets/img/pilares.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-primary px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-white font-bold text-xl">← Voltar</a>
+    <div class="space-x-4 text-sm text-gray-300">
+      <button id="lang-pt" class="hover:text-white">🇧🇷 Português</button>
+      <button id="lang-en" class="hover:text-white">🇺🇸 English</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="px-6 py-10 max-w-6xl mx-auto space-y-16" id="content">
+
+    <!-- PILARES -->
+    <section>
+      <h1 class="text-3xl md:text-4xl font-bold text-indigo-400 mb-4" data-i18n="title">🌐 Pilares Estratégicos</h1>
+      <ul class="space-y-4 text-sm text-gray-300 leading-relaxed">
+        <li><strong class="text-white" data-i18n="descentralizacao-t">🔒 Descentralização:</strong> <span data-i18n="descentralizacao-d">Baseada em smart contracts imutáveis, auditáveis e conectáveis.</span></li>
+        <li><strong class="text-white" data-i18n="empatia-t">❤️ Empatia Digital:</strong> <span data-i18n="empatia-d">O avatar perpetua emoções, memórias e instruções do criador.</span></li>
+      </ul>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-400 mb-4" data-i18n="economia-t">💠 Economia do Token (SGL)</h2>
+      <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+        <li data-i18n="emissao">🪙 Emissão ao criar avatares, cápsulas e ações especiais.</li>
+        <li data-i18n="staking">📈 Staking para evolução do avatar e recompensas.</li>
+        <li data-i18n="queima">🔥 Queima automática parcial para garantir escassez.</li>
+        <li data-i18n="circular">🔁 Receita circular reinvestida em serviços e premium.</li>
+      </ul>
+    </section>
+
+    <!-- IMAGEM PILARES -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-400 mb-4" data-i18n="grafico-t">🧬 Pilares da Eternização</h2>
+      <img src="./assets/img/pilares.png" alt="Pilares da Eternização Digital" class="rounded-xl shadow-lg w-full max-w-3xl mx-auto border border-indigo-600" />
+    </section>
+
+    <!-- INTEROPERABILIDADE -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-400 mb-4" data-i18n="interoperabilidade-t">🔗 Interoperabilidade Blockchain</h2>
+      <p class="text-sm text-gray-400 leading-relaxed" data-i18n="interoperabilidade-d">
+        Suporte multichain: Ethereum, Polygon, Avalanche e Solana. Registro descentralizado, leitura universal.
+      </p>
+    </section>
+
+    <!-- B2B -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-400 mb-6" data-i18n="b2b-t">🤝 Benefícios B2B e White Label</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-sm text-gray-300">
+        <div class="bg-soft p-4 rounded border border-white/10">
+          <h3 class="text-lg font-semibold text-white">🏛️ Governos</h3>
+          <p data-i18n="b2b-governo">Preservação de acervo histórico, cultural e institucional.</p>
+        </div>
+        <div class="bg-soft p-4 rounded border border-white/10">
+          <h3 class="text-lg font-semibold text-white">🏥 Seguradoras</h3>
+          <p data-i18n="b2b-seguro">Automatização de instruções digitais, heranças e testamentos.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-gray-600 text-xs py-6 border-t border-white/10">
+    &copy; 2025 SingulAI • O tempo como herança
+  </footer>
+
+  <!-- Script Multilíngue -->
+  <script>
+    const translations = {
+      'en': {
+        title: "🌐 Strategic Pillars",
+        "descentralizacao-t": "🔒 Decentralization:",
+        "descentralizacao-d": "Based on immutable, auditable and multi-chain smart contracts.",
+        "empatia-t": "❤️ Digital Empathy:",
+        "empatia-d": "Avatars preserve emotional legacy and instructions.",
+        "economia-t": "💠 Token Economy (SGL)",
+        "emissao": "🪙 Minted when creating avatars, capsules and contracts.",
+        "staking": "📈 Staking enables evolution and rewards.",
+        "queima": "🔥 Automatic burn to increase scarcity.",
+        "circular": "🔁 Circular income reallocated to services and premium.",
+        "grafico-t": "🧬 Pillars of Digital Eternity",
+        "interoperabilidade-t": "🔗 Blockchain Interoperability",
+        "interoperabilidade-d": "Multichain support: Ethereum, Polygon, Avalanche, Solana. Global legacy visibility.",
+        "b2b-t": "🤝 B2B & White Label Solutions",
+        "b2b-governo": "Preservation of history, culture and public legacy.",
+        "b2b-seguro": "Automation of wills, inheritance and digital certificates."
+      }
+    };
+
+    const updateLang = (lang) => {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.innerText = translations[lang][key];
+        }
+      });
+    };
+
+    document.getElementById('lang-en').addEventListener('click', () => updateLang('en'));
+    document.getElementById('lang-pt').addEventListener('click', () => location.reload());
+  </script>
+</body>
+</html>
