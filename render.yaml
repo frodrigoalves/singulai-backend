@@ -1,4 +1,5 @@
-# render.yaml — configuração para o Render.com
+npm install
+npm install# render.yaml — configuração para o Render.com
 
 services:
   - type: web
