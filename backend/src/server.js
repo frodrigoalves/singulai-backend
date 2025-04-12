@@ -1,11 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-
-// Importa rotas
-const avatarRoutes = require('./routes/avatarRoutes');
-const walletRoutes = require('./routes/walletRoutes');
 const conectarMongo = require('./config/dbmongo');
+const walletRoutes = require('./routes/walletRoutes');
+const avatarRoutes = require('./routes/avatarRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,14 +11,17 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Rotas simuladas (sem dependência de banco agora)
-app.use('/api/avatars', avatarRoutes);
+// Conecta ao MongoDB
+conectarMongo();
+
+// Rotas da API
 app.use('/api/wallet', walletRoutes);
+app.use('/api/avatars', avatarRoutes);
 
 app.get('/', (req, res) => {
-  res.send('🧠 API da SingulAI está ONLINE — versão de teste sem MongoDB');
+  res.send('🧠 API da SingulAI rodando com MongoDB 🚀');
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor em http://localhost:${PORT}`);
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 });
