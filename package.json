@@ -2,16 +2,37 @@
   "name": "singulai-backend",
   "version": "1.0.0",
   "description": "Backend do projeto SingulAI",
-  "main": "server.js",
+  "main": "src/backend/server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "jest",
+    "start": "node src/backend/server.js",
+    "serve": "netlify dev"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "@vendia/serverless-express": "^4.12.6",
+    "axios": "^1.8.4",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "ethers": "^6.6.2",
-    "express": "^4.18.2",
-    "mongoose": "^7.2.4",
-    "pg": "^8.11.1"
+    "dotenv": "^16.5.0",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.6",
+    "pg": "^8.14.1",
+    "web3.storage": "^4.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frodrigoalves/singulai-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frodrigoalves/singulai-backend/issues"
+  },
+  "homepage": "https://github.com/frodrigoalves/singulai-backend#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
   }
 }

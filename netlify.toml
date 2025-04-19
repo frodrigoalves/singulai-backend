@@ -1,0 +1,9 @@
+[build]
+  command   = "npm install"
+  functions = "functions"
+  publish   = "."
+
+[[redirects]]
+  from   = "/api/*"
+  to     = "/.netlify/functions/express/:splat"
+  status = 200
